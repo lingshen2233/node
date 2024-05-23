@@ -1,14 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-const { post } = require('../routes');
-const shortid = require('shortid');
 
-const adapter = new FileSync(__dirname + '/../data/db.json');
-const db = low(adapter)
+
 const moment = require('moment');
-const AccountModel = require('../models/AccountModel');
+const AccountModel = require('../../models/AccountModel');
 // console.log(moment('2024-10-11').toDate());
 /* 警告: 在循环依赖项中访问模块导出的不存在的属性“post”
 （使用“node --trace-warnings ...”显示警告的创建位置） */
